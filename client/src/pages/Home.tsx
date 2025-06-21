@@ -4,6 +4,14 @@ import { useNavigate } from 'react-router-dom';
 const Home: React.FC = () => {
   const navigate = useNavigate();
 
+  const handleExploreClick = () => {
+    navigate('/explore');
+  };
+
+  const handleAdminClick = () => {
+    navigate('/admin');
+  };
+
   return (
     <div style={{ padding: '2rem', textAlign: 'center', minHeight: '70vh' }}>
       <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
@@ -13,9 +21,8 @@ const Home: React.FC = () => {
         Discover your next adventure! Book beautiful tours across India and the world with ease.
       </p>
 
-      {/* Explore Tours Button */}
       <button
-        onClick={() => navigate('/explore')}
+        onClick={handleExploreClick}
         style={{
           backgroundColor: '#0077cc',
           color: '#fff',
@@ -30,9 +37,8 @@ const Home: React.FC = () => {
         🌍 Explore Tours
       </button>
 
-      {/* Admin Dashboard Button */}
       <button
-        onClick={() => navigate('/admin')}
+        onClick={handleAdminClick}
         style={{
           backgroundColor: '#333',
           color: '#fff',

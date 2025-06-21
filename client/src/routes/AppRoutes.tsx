@@ -28,7 +28,6 @@ const AppRoutes = () => {
       <Route path="/explore" element={<Explore />} />
       <Route path="/explore/:country" element={<CountryTours />} />
 
-      {/* Admin Dashboard Layout + Nested Routes */}
       <Route path="/admin" element={<AdminDashboard />}>
         <Route path="tour-stats" element={<TourStats />} />
         <Route path="support-tickets" element={<SupportTickets />} />
